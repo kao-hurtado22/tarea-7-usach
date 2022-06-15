@@ -1,14 +1,28 @@
 /* FUNCION RECURSIVA */
 
 /* EJERCICIO A */
-for(let i = 0;i <= 100; i++){
+/* for(let i = 0;i <= 100; i++){
     console.log(i);
+} */
+const funcion1 = (n) => {
+    //condicion de salida
+    if (n > 100) return
+    console.log(n)
+    funcion1(n + 1)
 }
+funcion1()
 
 /* EJERCICIO B */
-for(let i = 1000 ;i >= 500; i--){
+/* for(let i = 1000 ;i >= 500; i--){
     console.log(i);
+} */
+const funcion2 = (n) => {
+    //condicion de salida
+    if (n = 1000 , n < 500) return
+    console.log(n)
+    funcion2(n - 1)
 }
+funcion2()
 
 /* PROMEDIO */
 function Promedio(promedioTotal) {
