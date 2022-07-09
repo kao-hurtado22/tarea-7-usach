@@ -10,7 +10,7 @@ class Personajes {
         var Personajes = [this.imagen, this.nombre, this.especie, this.id];
 
         //FUNCION DE SHOW PARA INGRESAR LOS DATOS
-        show(Personajes); 
+        show(Personajes);
     }
 }
 //SOLICITA LA INFORMACION PIDIENDO UNA URL
@@ -23,13 +23,15 @@ async function api() {
             for (let i = 0; i < data.results.length; i++) {
 
                 //CONSULTAR URL ANTERIOR
-                const response = await axios.get(api_url); 
+                const response = await axios.get(api_url);
                 var data2 = response.data;
+
                 //Datos
                 var id = data2.results[i].id;
                 var name = data2.results[i].name;
                 var especie = data2.results[i].species;
                 var imagen = data2.results[i].image;
+
                 // ingresa datos del api
                 let list = new Personajes(name, especie, imagen, id);
                 list.Mostrar(); //get del class
@@ -45,7 +47,7 @@ api()
 function show(Personajes) {
 
     let tab =
-            `<div class="card">
+        `<div class="card">
         <h1>${[Personajes[3]]}</h1>
     <img src="${[Personajes[0]]}"></img>
     <h1>${[Personajes[1]]}</h1>
